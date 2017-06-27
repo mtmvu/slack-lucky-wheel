@@ -1,0 +1,36 @@
+{
+  "name": "slack-lucky-wheel",
+  "description": "A simple lucky wheel for slack",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src",
+    "notify": "node ./src/tasks/notify",
+    "test": "standard"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-http-proxy": "^1.0.4"
+  },
+  "keywords": [
+    "slack",
+    "slack-bot",
+    "bot",
+    "heroku"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "8.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtmvu/slack-lucky-wheel.git"
+  },
+  "author": "vu.minhthangmarc@gmail.com",
+  "bugs": {
+    "url": "https://github.com/mtmvu/slack-lucky-wheel/issues"
+  },
+  "homepage": "https://github.com/mtmvu/slack-lucky-wheel#readme"
+}
