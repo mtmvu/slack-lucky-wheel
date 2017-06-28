@@ -75,7 +75,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
 
   message.response_type = 'in_channel'
   message.text = question
-  message.attachements = [
+  message.attachments = [
     {
       title: 'Rolling',
       image_url: 'https://media.giphy.com/media/lGocIxGhfcly/giphy.gif'
@@ -88,7 +88,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
   let winner = shuffle.pick(players)
   let winner_message = {
     reponse_type: 'in_channel',
-    text: 'And the winner is... ' + winner
+    text: 'And the winner is... ' + winner + '!!!'
   }
   let options = {
     url: payload.response_url,
@@ -96,7 +96,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
     body: winner_message,
     json: true
   }
-  utils.sleep(3)
+  utils.sleep(4)
     .then(
       () => request(options)
     )
