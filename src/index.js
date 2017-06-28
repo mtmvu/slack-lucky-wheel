@@ -102,3 +102,10 @@ app.post('/commands/lucky-wheel', (req, res) => {
     )
 
 })
+
+app.listen(config('PORT'), (err) => {
+  if (err) throw err
+
+  console.log(`\n🚀 LUCKY WHEEL LIVES on PORT ${config('PORT')} 🚀`)
+
+})
