@@ -5,7 +5,7 @@ const request = require('request')
 const shuffle = require('shuffle-array')
 
 const config = require('./config')
-import { sleep } from './utils'
+const utils = require('./utils')
 
 
 let app = express()
@@ -56,7 +56,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
   let re = /\"([^)]+)\"/
   let match = text.match(re)
   let question = ''
-  if match {
+  if (match) {
     question = match[1]
   }
 
@@ -77,7 +77,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
   message.text = question
   message.attachements = [
     {
-      title: 'Rolling'
+      title: 'Rolling',
       image_url: 'https://media.giphy.com/media/lGocIxGhfcly/giphy.gif'
     }
   ]
@@ -96,7 +96,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
     body: winner_message,
     json: true
   }
-  sleep(3)
+  utils.sleep(3)
     .then(
       () => request(options)
     )

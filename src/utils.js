@@ -9,7 +9,4 @@ let utils = {
   }
 }
 
-export default utils
-export let {
-  sleep
-} = utils
+module.exports = utils
