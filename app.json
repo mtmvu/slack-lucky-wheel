@@ -1,0 +1,17 @@
+{
+  "name": "slack-lucky-wheel",
+  "description": "A simple lucky wheel for slack",
+  "repository": "https://github.com/mtmvu/slack-lucky-wheel.git",
+  "success_url": "/",
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "SLACKBOT_COMMAND_TOKEN": {
+      "description": "Slash command token, for the starbot command endpoint",
+      "required": true
+    },
+    "NODE_ENV": "staging"
+  },
+  "image": "heroku/nodejs"
+}
