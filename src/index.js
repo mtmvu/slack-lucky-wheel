@@ -52,6 +52,10 @@ app.post('/commands/lucky-wheel', (req, res) => {
     return
   }
 
+  // Replace quotes
+  text = text.replace(/“/g, '"')
+  text = text.replace(/'/g, '"')
+
   // Parse question between quotes
   let re = /\"([^)]+)\"/
   let match = text.match(re)
