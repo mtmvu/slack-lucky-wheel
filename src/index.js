@@ -87,7 +87,7 @@ app.post('/commands/lucky-wheel', (req, res) => {
 
   let winner = shuffle.pick(players)
   let winner_message = {
-    reponse_type: 'in_channel',
+    response_type: 'in_channel',
     text: 'And the winner is... ' + winner + '!!!'
   }
   let options = {
